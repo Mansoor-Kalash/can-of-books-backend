@@ -58,16 +58,16 @@ App.post("/addbook", newFavBook);
 App.delete("/deletebook/:bookId", deleteBook);
 App.put("/updatebook/:bookId", updateCatHandler);
 App.get("/", homeHandler);
-App.get("*", notFoundHandler);
+// App.get("*", notFoundHandler);
 
 function homeHandler(req, res) {
   res.send("all good");
 }
-function notFoundHandler(req, res) {
-  res.status(404).send({
-    error: "Unable to get the route",
-  });
-}
+// function notFoundHandler(req, res) {
+//   res.status(404).send({
+//     error: "Unable to get the route",
+//   });
+// }
 
 function getFavBook(req, res) {
   console.log("inside getCatsHandler func");
